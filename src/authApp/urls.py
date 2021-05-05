@@ -1,4 +1,7 @@
-from django.urls import path
+from django.urls import path, include
 from authApp import views
 
-urlpatterns = []
+urlpatterns = [
+    path('', include('djoser.urls')),
+    path('', include('djoser.urls.authtoken')),
+]
