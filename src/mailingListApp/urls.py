@@ -23,4 +23,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('auth/', include('authApp.urls')),
     path('new/', core_views.new, name='new'),
+    path('confirm/', core_views.confirm, name='confirm'),
+    path('delete/', core_views.delete, name='delete'),
 ]
