@@ -50,8 +50,19 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.AllowAny',
     ]
+}
+
+AUTH_USER_MODEL = 'authApp.User'
+
+DJOSER ={
+    'LOGIN_FIELD': 'email',
+    'USER_CREATE_PASSWORD_RETYPE': True,
+    'SERIALIZERS':{
+        'user_create': 'authApp.serializers.UserCreateSerializer',
+        'user': 'authApp.serializers.UserCreateSerializer',
+    }
 }
 
 MIDDLEWARE = [
