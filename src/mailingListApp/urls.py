@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('auth/', include('authApp.urls')),
+    path('new/', core_views.new, name='new'),
 ]
